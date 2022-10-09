@@ -1,0 +1,29 @@
+<html>
+   <body>
+      <form action = "http://localhost:5000/uploader" method = "POST" 
+         enctype = "multipart/form-data">
+         <input type = "file" name = "file" />
+         <input type = "submit"/>
+      </form >   
+      query
+      <form action="http://localhost:5000/query" method = "POST">
+      		<input name="text" name="query">
+      </form>
+      <!--
+      query with TF-IDF
+      <form action="http://localhost:5000/tfidf" method = "POST">
+      		<input name="text" name="query">
+      </form>
+      -->
+      how many passages to return
+      <form action="http://localhost:5000/set_k" method = "POST">
+      		<input name="k" name="k">
+      </form>
+
+   </body>
+   <body>
+      {% for mesg in get_flashed_messages() %}
+      <h1>{{ mesg }}</h1>
+      {% endfor %}
+    </body>
+</html>
